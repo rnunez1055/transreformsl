@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(../plugins/jquery.ui.css);
+
+* html #poststuff {height: 100%; /* kill peekaboo bug in IE */}
+/* This is the Holly Hack \*/
+* html .wrap { height: 1% }
+/* For Win IE's eyes only */
+a {text-decoration: none;}
+a.delete:hover {background: #c00;color: #fff;}
+a.view, a.edit, a.delete, a.view:hover, a.edit:hover, a.delete:hover {border-bottom: none;display: block;padding: 5px 0;text-align: center;}
+a.view:hover, a.edit:hover {background: #ccc;color: #036;}
+a:visited {color: #004;}
+a:hover {color: #069;}
+body{background: #ffdd00;color: #ffffff;margin: 0;padding: 0;}
+body, td {font: 18px arial, Verdana, sans-serif;background: #fff url(../../images/admin/background.jpg) top center;}
+fieldset {border: 1px solid #d4d4d4;padding: 10px 20px;}
+fieldset label.selectit {display: block;font-size: 12px;padding: 0 5px;}
+fieldset label.selectit:hover {background: #e4e9f6;}
+fieldset legend {padding: .1em .0em;}
+fieldset.options {padding: 0em;}
+fieldset.options legend {font-size: 1.5em;font-weight: bold;font-family: Georgia, "Times New Roman", Times, serif;}
+form, label input {margin: 0;padding: 0;}
+h1 {color: #000000;font: normal 20px Georgia, "Times New Roman", Times, serif;margin: 5px 10px 40px 45px;}
+h2 {color: #333;font: normal 32px Georgia, "Times New Roman", Times, serif;margin: 5px 10px;}
+img {border: 0;}
+input[type=text]:focus, input[type=password]:focus,input.text:focus, input.title:focus,textarea:focus, select:focus {border:2px solid #444;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {border: 2px solid #d1d1d1;color: #333333;font-size: 11px;margin:2px;-moz-border-radius: 5px;-webkit-border-radius: 5px;padding:3px;}
+input.text, input.title {width: 200px;padding: 3px;}
+input[type=button],
+input[type=submit],
+input[type=reset]{padding: 5px;background: #000 url(../../images/admin/bg-boton.jpg);color: #fff;text-transform:uppercase;font-weight:bold;font-size:11px;cursor: pointer;
+  -moz-border-radius: 5px;-webkit-border-radius: 5px;border:1px solid #333;}
+#logoCetres{ text-align:left;}
+#login {position: relative;color: #000000;margin: 5em auto 1em;padding: 20px 0 0;width: 425px;_width: 390px;}
+#login form {padding: 0 50px 25px;_width: 325px;_margin: 0 auto;min-height: 200px;height: auto !important; /* min-height fast hack */height: 200px;}
+#login #login_error {background: #0e3350;border: 1px solid #2571ab;color: #ebcd4e;font-size: 11px;font-weight: bold;padding: .6em;width: 310px;margin: 0 50px;text-align: center;}
+#login #send {color: #fff;text-align: left;font-weight: normal;font-size: 1.1em;_width: 325px;_margin: 0 auto 15px;}
+#login h1 a {margin: 0 auto;height: 88px;width: 320px;display: block;border-bottom: none;text-indent: -9999px;}
+#login .message {font-size: 10pt;text-align: center;}
+#login .register {font-size: 20px;}
+#login input {padding: 4px;}
+.login ul, #protected #login .bottom {list-style: none;width: 325px;margin: 0 auto;padding: 0;line-height: 1.2;}
+.login ul li {font-size: 11px;}
+.login ul li a {color: #0d324f;border: none;}
+#login ul li a:hover {color: #fff;}
+#login .input {font-size: 1.8em;margin-top: 3px;width: 97%;}
+#login p label {font-size: 11px;}
+#login #submit {margin: 0;font-size: 15px;}

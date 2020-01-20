@@ -1,0 +1,75 @@
+/* content */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+#amazingcarousel-2 .amazingcarousel-image {	
+	position: relative;
+	padding: 0px;
+}
+
+#amazingcarousel-2 .amazingcarousel-image img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+}
+
+#amazingcarousel-2 .amazingcarousel-title {
+	position:relative;
+	font:14px 'Open Sans', sans-serif;
+	color:#333333;
+	margin:6px;
+
+}
+
+/* carousel */
+
+#amazingcarousel-container-2 {
+	padding: 0;
+}
+
+#amazingcarousel-2 .amazingcarousel-list-container {
+	padding: 0;
+}
+
+/* item */
+
+#amazingcarousel-2 .amazingcarousel-item-container {
+	text-align: center;
+	padding: 0px;
+	background-color: #fff;
+}
+
+/* arrows */
+
+#amazingcarousel-2 .amazingcarousel-prev {
+	left: 0%;
+	top: 50%;
+	margin-left: -31px;
+	margin-top: -52px;
+}
+
+#amazingcarousel-2 .amazingcarousel-next {
+	right: 0%;
+	top: 50%;
+	margin-right: -16px;
+	margin-top: -52px;
+}
+
+/* navigation bullets */
+
+#amazingcarousel-2 .amazingcarousel-nav {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+}
+
+#amazingcarousel-2 .amazingcarousel-bullet-wrapper {
+	margin: 0px auto;
+}
+
+
+

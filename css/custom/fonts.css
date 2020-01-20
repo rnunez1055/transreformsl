@@ -1,0 +1,38 @@
+/* CSS Document */
+
+@font-face {
+    font-family: 'NeometricMedium';
+    src: url('../../include/fonts/neometric-medium-webfont.eot');
+    src: url('../../include/fonts/neometric-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../include/fonts/neometric-medium-webfont.woff') format('woff'),
+         url('../../include/fonts/neometric-medium-webfont.ttf') format('truetype'),
+         url('../../include/fonts/neometric-medium-webfont.svg#NeometricMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CenturyGothicBold';
+    src: url('../../include/fonts/gothicb-webfont.eot');
+    src: url('../../include/fonts/gothicb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../include/fonts/gothicb-webfont.woff') format('woff'),
+         url('../../include/fonts/gothicb-webfont.ttf') format('truetype'),
+         url('../../include/fonts/gothicb-webfont.svg#CenturyGothicBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CenturyGothicRegular';
+    src: url('../../include/fonts/gothic-webfont.eot');
+    src: url('../../include/fonts/gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../include/fonts/gothic-webfont.woff') format('woff'),
+         url('../../include/fonts/gothic-webfont.ttf') format('truetype'),
+         url('../../include/fonts/gothic-webfont.svg#CenturyGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

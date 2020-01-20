@@ -1,0 +1,74 @@
+/*
+Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+/*@import url(../../contenido/css/escritorio.css); */
+
+body
+{
+	/* Font */
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 12px;
+
+	/* Text color */
+	color: #222;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+}
+
+html
+{
+	/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+	To prevent this misbehavior, we show the scrollbar always */
+	_overflow-y: scroll
+}
+
+img:-moz-broken
+{
+	-moz-force-broken-image-icon : 1;
+	width : 24px;
+	height : 24px;
+}
+img, input, textarea
+{
+	cursor: default;
+}
+
+
+
+/* customized for viveperu.org  */
+.divicion {
+	clear: both;
+	width: auto;
+	height: 56px;
+	background-image: url(../../contenido/img/fondo_22.jpg);
+	background-repeat: repeat-x;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+	.links_int1{
+	width: auto;
+	height: auto;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+		
+		}
+	.links_int2{
+	width:auto;
+	height:auto;
+	color:#000;line-height: 1.6;
+/*		margin-bottom:10px;
+		background-image:url(../../contenido/img/lineas_int.jpg);
+	background-repeat:repeat-x;
+	background-position:0 100%;
+	padding-bottom:10px;
+	font-size:12px; */
+		
+		
+		}

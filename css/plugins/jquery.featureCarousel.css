@@ -1,0 +1,167 @@
+/********************
+ * FEATURE CAROUSEL *
+ ********************/
+.carousel-container {
+  position:relative;
+  /*width:960px;*/
+}
+#carousel {
+  height:255px;
+  width:910px;
+  /*background-color:#CCC;*/
+  position:relative;
+  /*margin-bottom:0.5em;
+  font-size:12px;
+  font-family: Arial;*/
+}
+#carousel .carousel-image {
+  border:0;
+  display:block;
+}
+#carousel .carousel-feature {
+  position:absolute;
+  top:-1000px;
+  left:-1000px;
+  /*border:2px solid #5d5d5d;*/
+  cursor:pointer;
+}
+#carousel .carousel-feature .carousel-caption {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background-color:#000;
+}
+#carousel .carousel-feature .carousel-caption p {
+  margin:0;
+  padding:5px;
+  font-weight:bold;
+  font-size:12px;
+  color:white;
+}
+#carousel .tracker-summation-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:230px;
+  padding:3px;
+  margin:3px;
+  background-color:#000;
+}
+#carousel .tracker-individual-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:210px;
+  padding:0;
+  margin:0;
+}
+#carousel .tracker-individual-container li {
+  list-style:none;
+}
+#carousel .tracker-individual-container .tracker-individual-blip {
+  margin:0 3px;
+  padding:0 3px;
+  color:white;
+  text-align:center;
+  background-color:#DDD;
+}
+#carousel .tracker-individual-container .tracker-individual-blip-selected {
+  color:white;
+  font-weight:bold;
+  background-color:#000;
+}
+#carousel-left {
+  position:absolute;
+  top:110px;
+  left:10px;
+  cursor:pointer;
+}
+#carousel-right {
+  position:absolute;
+  top:110px;
+  right:10px;
+  cursor:pointer;
+}
+
+
+
+
+
+
+#carousel2 {
+  height:255px;
+  width:910px;
+  /*background-color:#CCC;*/
+  position:relative;
+  /*margin-bottom:0.5em;
+  font-size:12px;
+  font-family: Arial;*/
+}
+#carousel2 .carousel-image {
+  border:0;
+  display:block;
+}
+#carousel2 .carousel-feature {
+  position:absolute;
+  top:-1000px;
+  left:-1000px;
+  /*border:2px solid #5d5d5d;*/
+  cursor:pointer;
+}
+#carousel2 .carousel-feature .carousel-caption {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background-color:#000;
+}
+#carousel2 .carousel-feature .carousel-caption p {
+  margin:0;
+  padding:5px;
+  font-weight:bold;
+  font-size:12px;
+  color:white;
+}
+#carousel2 .tracker-summation-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:230px;
+  padding:3px;
+  margin:3px;
+  background-color:#000;
+}
+#carousel2 .tracker-individual-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:210px;
+  padding:0;
+  margin:0;
+}
+#carousel2 .tracker-individual-container li {
+  list-style:none;
+}
+#carousel2 .tracker-individual-container .tracker-individual-blip {
+  margin:0 3px;
+  padding:0 3px;
+  color:white;
+  text-align:center;
+  background-color:#DDD;
+}
+#carousel2 .tracker-individual-container .tracker-individual-blip-selected {
+  color:white;
+  font-weight:bold;
+  background-color:#000;
+}
+#carousel2-left {
+  position:absolute;
+  top:110px;
+  left:10px;
+  cursor:pointer;
+}
+#carousel2-right {
+  position:absolute;
+  top:110px;
+  right:10px;
+  cursor:pointer;
+}

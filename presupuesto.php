@@ -343,7 +343,7 @@ include('inc_header.php');
             </fieldset>
             <div class="div-aceptar centrar">
               <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
-              <p>Acepto y he leído la política de <a style="color:#007F59" href="politicas-de-privacidad" target="_blank" class="aceptar-terminos">protección de datos</a></p>
+              <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>
             </div>
             <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar'); ?>" />
             <!-- <input class="bt_form" type="reset" value="<?= t('t_for_limpiar'); ?>" /> -->
@@ -361,6 +361,9 @@ include('inc_header.php');
       </div>
     </div>
     <div class="clear1"></div>
+    <?php
+    include('inc_footer.php');
+    ?>
     <script>
       $(document).ready(function() {
         $('#send').attr("disabled", true);

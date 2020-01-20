@@ -925,3 +925,106 @@ textarea.w-input, textarea.w-select {
 	margin-left: 91.66666666666666%
 }
 }
+.caja01-ancho{
+	width: 100%;
+}
+/* CAMBIOS */
+.whatsaap {
+	position: fixed;
+	bottom: .7rem;
+	right: 2rem;
+	z-index: 10;
+}
+
+.whatsaap__icon {
+	background-color: #3AC04D;
+	color: #fff;
+	font-size: 3.5rem;
+	border-radius: 50%;
+	padding: .5rem .8rem;
+}
+
+.cont-empresa {
+	width: 88%;
+	margin: auto;
+}
+.cont-empresa-title {
+	font-size: 45px;
+	text-align: center;
+	font-style: italic;
+	padding: 30px 0;
+	color: #fff;
+	margin-bottom: 0;
+}
+.cont-politicas {
+	width: 80%;
+	margin: auto;
+	text-align: justify;
+}
+.privacidad-condiciones {
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+.uso-privacidad {
+	font-size: 30px;
+	margin-bottom: 5px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.empresa-mision-pa {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.5;
+	font-style: italic;
+}
+.aviso-privacidad {
+	font-style: normal;
+}
+.title-General-privacidad {
+	font-size: 25px;
+	color: #000;
+	letter-spacing: 1px;
+}
+.table-responsive {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.table-privacidad th,
+.table-privacidad td {
+	padding: .5em;
+}
+.table td,
+.table th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 1px solid #dee2e6;
+}
+.sub-condicionesThree {
+	margin-left: 40px;
+	margin-bottom: 15px;
+}
+.empresa-mision-pa {
+	/* font-family: 'Roboto', sans-serif, Arial, Tahoma; */
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.5;
+	font-style: italic;
+}
+.s-politicas {
+	color: #000;
+}
+.sub-condicionesThree,
+.three-condicionesThree {
+	margin-top: 2rem;
+}
+.title-subGeneral-privacidad{
+	margin-bottom: 1rem;
+}
+.title-General-privacidad{
+	margin-bottom: 1rem;
+}

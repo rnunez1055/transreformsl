@@ -122,7 +122,7 @@
                 <?= t('t_for_telefono');?>
               </label>
               <input class="caj1" id="telefono" name="telefono" data-name="telefono" type="text" placeholder="<?= t('t_for_telefono');?>" name="telefono" data-name="telefono" required="required"/>
-              <label class="lb_1"><u>
+              <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_origen');?>
                 </u></label>
               <label class="lb_1">
@@ -192,11 +192,11 @@
                 <option value="spiso" selected="selected">--</option>
                 <option value="SI"><?= t('t_for_si');?></option>
                 <option value="NO"><?= t('t_for_no');?></option>
-              </select>
+              </select> -->
               <label class="lb_1">
                 <?= t('t_for_como_conocio');?>
               </label>
-              <select id="Comonosconocio" name="Comonosconocio" class="caj01">
+              <select  id="Comonosconocio" name="Comonosconocio" class="caj01 caja01-ancho">
                 <option value="">---</option>
                 <option value="Páginas amarillas">
                 <?= t('t_for_paginaamarillas');?>
@@ -259,7 +259,7 @@
                 <?= t('t_for_fechas_deseadas');?>
               </label>
               <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza"  type="date" placeholder="" class="caj1" required/>
-              <label class="lb_1"><u>
+              <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_destino');?>
                 </u></label>
               <label class="lb_1">
@@ -334,17 +334,17 @@
             <label class="lb_1">
               <?= t('t_for_comentarios');?>
             </label>
-            <textarea class="caj2" id="Mensaje" name="Mensaje" data-name="Mensaje" cols="" rows="" placeholder="<?= t('t_for_comentarios');?>" required="required"></textarea>
+            <textarea class="caj2" id="Mensaje" name="Mensaje" data-name="Mensaje" cols="" rows="" placeholder="<?= t('t_for_comentarios');?>" required="required"></textarea> -->
           </fieldset>
           <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar');?>" />
-          <input class="bt_form" type="reset" value="<?= t('t_for_limpiar');?>" />
+          <!-- <input class="bt_form" type="reset" value="<?= t('t_for_limpiar');?>" /> -->
         </form>
         <?php } ?>
       </div>
       <div class="clear1"></div>
-      <div class="text_descr_3">
+      <!-- <div class="text_descr_3">
         <?= t('t_for_terminos');?>
-      </div>
+      </div> -->
       <div class="text_descr_3">
         <h5 align="center"><strong><i><span style="color:#007F59">"
           <?= t('t_for_slogan');?>

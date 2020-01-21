@@ -70,8 +70,15 @@ $headers .= "Reply-To:" . $email . "\n";
 $envio = mail($emailTo, $subject, $body, $headers);
 
 if ($envio) {
-    $miresultado = '<p class="feedback yay"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_OK") . '</a></p>';
+    $miresultado = '
+    <h2 class="alert alert-success centrar">' . "¡Bien hecho!" . '</h2>
+    <h4 class="title-message">' . "El correo ha sido enviado! Gracias por ponerse en contacto con nosotros." . '</h4>
+    <a href="index.php" class="button__cancelar primary-button btn-preguntas btn-form">' . "Aceptar" . '</a>';
 } else {
-    $miresultado = '<p class="feedback oops"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_ERROR") . '</a></p>';
+    $miresultado = '
+    <h2  class="alert alert-danger centrar">' . "Error" . '</h2>
+    <h4 class="title-message">' . "No se envió el correo. Por favor trate de comunicarse por otro medio." . '</h4>
+    <a href="index.php" class="button__cancelar primary-button btn-preguntas btn-form">' . "Aceptar" . '</a>';
 }
 echo $miresultado;
+?>

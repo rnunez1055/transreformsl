@@ -76,7 +76,7 @@
                         <input type="mail" id="mail" name="email" placeholder="<?= t('correo_electronico'); ?>" required>
                         <div class="input__politica">
                             <input type="checkbox" name="acepto" id="checka">
-                            <label for="acepto" class="texto__acepto"><?= t('terminos_parte_uno'); ?><a href="" class="politica"><?= t('terminos_parte_dos'); ?></a></label>
+                            <label for="acepto" class="texto__acepto"><?= t('terminos_parte_uno'); ?><a href="politica-privacidad.php" class="politica"><?= t('terminos_parte_dos'); ?></a></label>
                         </div>
                         <span class="activar__check"><?= t('seleccionar_check'); ?></span>
                         <button id="send_contacto_a" name="send_contacto" class="llamamos__button" disabled><?= t('enviar_cotizacion'); ?></button>

@@ -55,21 +55,21 @@ $("#form-presupuesto").validate({
         return false;
     },
     rules: {
-        nombres_p: {
+        nombre: {
             required: true
         },
-        apellidos_p: {
+        apellidos: {
             required: true
         },
-        email_p: {
+        Email: {
             required: true,
             email: true
         },
-        telefono_p: {
+        telefono: {
             required: true,
             number: true
         },
-        fecha_deseada_mudanza_p: {
+        fecha_deseada_mudanza: {
             required: true
         }
     }

@@ -1483,3 +1483,12 @@ element.style {}
 	margin-top: 1rem;
 	text-decoration: none;
 }
+.alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb
+}
+
+.alert-success hr {
+	border-top-color: #b1dfbb
+}

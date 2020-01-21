@@ -3,19 +3,19 @@ $pPageIsPublic = true;
 include '_common.php';
 //header('Access-Control-Allow-Origin: *');
     
-$emailFrom = "info@servimoving.com";
-$emailTo = "info@servimoving.com";
-$emailFrom = "info@servimoving.com";
-$emailTo = "info@servimoving.com";
-$subject = "FORMULARIO DE SOLICITAR PRESUPUESTO SERVIMOVING";
+$emailFrom = "a.marinos@evolucionmedia.pe";
+$emailTo = "a.marinos@evolucionmedia.pe";
+// $emailFrom = "info@servimoving.com";
+// $emailTo = "info@servimoving.com";
+$subject = "FORMULARIO DE SOLICITAR PRESUPUESTO TRANSREFORM";
 
 // Datos personales del Cliente
 $nombres = strip_tags($_POST['Nombre']);
 $apellidos = strip_tags($_POST['Apellidos']);
 $email = strip_tags($_POST['Email']);
-$tipo_servicio = strip_tags($_POST['tipo_servicio']);
 $telefono = strip_tags($_POST['Telefono']);
 $movil = strip_tags($_POST['Movil']);
+$tipo_servicio = strip_tags($_POST['tipo_servicio']);
 $fecha_deseada_mudanza = strip_tags($_POST['fecha_deseada_mudanza']);
 $Comonosconocio = strip_tags($_POST['Comonosconocio']);
 
@@ -40,10 +40,11 @@ $ascensor_destino = strip_tags($_POST['ascensor_destino']);*/
 $body = "Nombres: ".$nombres."\n";								
 $body .= "Apellidos: ".$apellidos."\n";
 $body .= "E-mail: ".$email."\n";
-$body .= "Tipo de Servicio: ".$tipo_servicio."\n";
 $body .= "Teléfono: ".$telefono."\n";
 $body .= "Movil: ".$movil."\n";
+$body .= "Tipo de Servicio: ".$tipo_servicio."\n";
 $body .= "Fecha deseada para el Servicio: ".$fecha_deseada_mudanza."\n\n";
+$body .= "¿Cómo nos conoció?: ".$Comonosconocio."\n";
 
 /*$body .= "CUIDAD DE ORIGEN \n";
 $body .= "Provincia: ".$provincia_origen."\n";
@@ -61,7 +62,6 @@ $body .= "Código Postal: ".$cod_postal_destino."\n";
 $body .= "Piso: ".$piso_destino."\n";
 $body .= "Ascensor: ".$ascensor_destino."\n\n";*/
 
-$body .= "¿Cómo nos conoció?: ".$Comonosconocio."\n";
 //$body .= "Mensaje: ".$mensaje."\n";
 
 $headers = "From: ".$emailFrom."\n";

@@ -29,118 +29,42 @@ include('inc_header.php');
         <?= t('title_presupuesto_mudanzas'); ?>
       </div>
       <div class="text_descr_3">
-        <?php
-        if (isset($_POST['send'])) {
-          $emailFrom = "informes@transreformsl.com";
-          $emailTo = "informes@transreformsl.com";
-          $subject = " | FORMULARIO DE PRESUPUESTO";
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form-presupuesto" name="form-presupuesto">
+          <div class="panel__confirmacion vertical" id="respta"></div>
+          <div class="form__grid">
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_nombres'); ?>
+              </label>
+              <input class="caj1" id="nombre" name="nombre" data-name="nombre" type="text" placeholder="<?= t('t_for_nombres'); ?>" required="required" />
+            </div>
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_apellidos'); ?>
+              </label>
+              <input class="caj1" id="apellidos" name="apellidos" data-name="apellidos" type="text" placeholder="<?= t('t_for_apellidos'); ?>" required="required" />
+            </div>
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_email'); ?>
+              </label>
+              <input class="caj1" id="Email" name="Email" data-name="Email" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
+            </div>
 
-          /*DATOS BASICOS*/
-          $nombre = strip_tags($_POST['nombre']);
-          $apellidos = strip_tags($_POST['apellidos']);
-          $telefono = strip_tags($_POST['telefono']);
-          $Email = strip_tags($_POST['Email']);
-          $tipo_servicio = strip_tags($_POST['tipo_servicio']);
-          $fecha_deseada_mudanza = strip_tags($_POST['fecha_deseada_mudanza']);
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_telefono'); ?>
+              </label>
+              <input class="caj1" id="telefono" name="telefono" data-name="telefono" type="text" placeholder="<?= t('t_for_telefono'); ?>" name="telefono" data-name="telefono" required="required" />
+            </div>
+            <div>
+              <label class="lb_1">
+                Movil
+              </label>
+              <input class="caj1" id="movil" name="movil" data-name="movil" type="text" placeholder="Movil" name="movil" data-name="movil" required="required" />
+            </div>
 
-          /*DATOS ORIGEN*/
-          $provincia_origen = strip_tags($_POST['provincia_origen']);
-          $poblacion_origen = strip_tags($_POST['poblacion_origen']);
-          $direccion_origen = strip_tags($_POST['direccion_origen']);
-          $cod_postal_origen = strip_tags($_POST['cod_postal_origen']);
-          $piso_origen = strip_tags($_POST['piso_origen']);
-          $ascensor_origen = strip_tags($_POST['ascensor_origen']);
-
-          /*DATOS DESTINO*/
-          $provincia_destino = strip_tags($_POST['provincia_destino']);
-          $poblacion_destino = strip_tags($_POST['poblacion_destino']);
-          $direccion_destino = strip_tags($_POST['direccion_destino']);
-          $cod_postal_destino = strip_tags($_POST['cod_postal_destino']);
-          $piso_destino = strip_tags($_POST['piso_destino']);
-          $ascensor_destino = strip_tags($_POST['ascensor_destino']);
-
-          /*DATOS EXTRAS*/
-          $Comonosconocio = strip_tags($_POST['Comonosconocio']);
-          $Mensaje = strip_tags($_POST['Mensaje']);
-
-          /*----------------------------------------------*/
-
-          $body = "Nombres : " . $nombre . "\n";
-          $body .= "Apellidos : " . $apellidos . "\n";
-          $body .= "Teléfono : " . $telefono . "\n";
-          $body .= "Email : " . $Email . "\n";
-          $body .= "Tipo de Servicio : " . $tipo_servicio . "\n";
-          $body .= "Fecha deseada de Mudanza : " . $fecha_deseada_mudanza . "\n";
-
-          /*DATOS ORIGEN*/
-          $body .= "DATOS DE ORIGEN \n";
-          $body .= "Provincia : " . $provincia_origen . "\n";
-          $body .= "Población : " . $poblacion_origen . "\n";
-          $body .= "Dirección : " . $direccion_origen . "\n";
-          $body .= "Cod-Postal : " . $cod_postal_origen . "\n";
-          $body .= "Piso : " . $piso_origen . "\n";
-          $body .= "Ascensor : " . $ascensor_origen . "\n";
-
-          /*DATOS DESTINO*/
-          $body .= "DATOS DE DESTINO \n";
-          $body .= "Provincia : " . $provincia_destino . "\n";
-          $body .= "Población : " . $poblacion_destino . "\n";
-          $body .= "Dirección : " . $direccion_destino . "\n";
-          $body .= "Cod-Postal : " . $cod_postal_destino . "\n";
-          $body .= "Piso : " . $piso_destino . "\n";
-          $body .= "Ascensor : " . $ascensor_destino . "\n";
-
-          /*DATOS EXTRAS*/
-          $body .= "Como nos conocio : " . $Comonosconocio . "\n";
-          $body .= "Mensaje : " . $Mensaje . "\n";
-
-          $headers = "From: " . $emailFrom . "\n";
-          $headers .= "Reply-To:" . $email . "\n";
-
-          $success = mail($emailTo, $subject, $body, $headers);
-
-          if ($success) {
-            echo '<p class="feedback yay"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_OK") . '</a></p>';
-          } else {
-            echo '<p class="feedback oops"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_ERROR") . '</a></p>';
-          }
-        } else {
-        ?>
-          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="contact" name="contact">
-            <div class="form__grid">
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_nombres'); ?>
-                </label>
-                <input class="caj1" id="nombre" name="nombre" data-name="nombre" type="text" placeholder="<?= t('t_for_nombres'); ?>" required="required" />
-              </div>
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_apellidos'); ?>
-                </label>
-                <input class="caj1" id="apellidos" name="apellidos" data-name="apellidos" type="text" placeholder="<?= t('t_for_apellidos'); ?>" required="required" />
-              </div>
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_email'); ?>
-                </label>
-                <input class="caj1" id="Email" name="Email" data-name="Email" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
-              </div>
-
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_telefono'); ?>
-                </label>
-                <input class="caj1" id="telefono" name="telefono" data-name="telefono" type="text" placeholder="<?= t('t_for_telefono'); ?>" name="telefono" data-name="telefono" required="required" />
-              </div>
-              <div>
-                <label class="lb_1">
-                  Movil
-                </label>
-                <input class="caj1" id="movil" name="movil" data-name="movil" type="text" placeholder="Movil" name="movil" data-name="movil" required="required" />
-              </div>
-
-              <!-- <label class="lb_1"><u>
+            <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_origen'); ?>
                 </u></label>
               <label class="lb_1">
@@ -212,77 +136,77 @@ include('inc_header.php');
                 <option value="NO"><?= t('t_for_no'); ?></option>
                 
               </select> -->
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_servicio'); ?>
-                </label>
-                <select id="tipo_servicio" name="tipo_servicio" class="caj1">
-                  <option value="MUDANZAS LOCALES Y NACIONALES" selected="selected">
-                    <?= t('t_for_mudanzalocalesnacionales'); ?>
-                  </option>
-                  <option value="MUDANZAS INTERNACIONALES">
-                    <?= t('t_for_mudanzasinternacionales'); ?>
-                  </option>
-                  <option value="TRASLADO DE OFICINAS">
-                    <?= t('t_for_trasladodeoficinas'); ?>
-                  </option>
-                  <option value="DESMONTAJE Y MONTAJE DE MUEBLES">
-                    <?= t('t_for_desmontajemontajemuebles'); ?>
-                  </option>
-                  <option value="ELEVADOR AUTOMATICO DE MUEBLES">
-                    <?= t('t_for_elevadorautomatico'); ?>
-                  </option>
-                  <option value="EMBALAJES">
-                    <?= t('t_for_embalajes'); ?>
-                  </option>
-                  <option value="ALMACEN GUARDAMUEBLES">
-                    <?= t('t_for_almacen'); ?>
-                  </option>
-                </select>
-              </div>
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_fechas_deseadas'); ?>
-                </label>
-                <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza" type="date" placeholder="" class="caj1" required />
-              </div>
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_servicio'); ?>
+              </label>
+              <select id="tipo_servicio" name="tipo_servicio" class="caj1">
+                <option value="MUDANZAS LOCALES Y NACIONALES" selected="selected">
+                  <?= t('t_for_mudanzalocalesnacionales'); ?>
+                </option>
+                <option value="MUDANZAS INTERNACIONALES">
+                  <?= t('t_for_mudanzasinternacionales'); ?>
+                </option>
+                <option value="TRASLADO DE OFICINAS">
+                  <?= t('t_for_trasladodeoficinas'); ?>
+                </option>
+                <option value="DESMONTAJE Y MONTAJE DE MUEBLES">
+                  <?= t('t_for_desmontajemontajemuebles'); ?>
+                </option>
+                <option value="ELEVADOR AUTOMATICO DE MUEBLES">
+                  <?= t('t_for_elevadorautomatico'); ?>
+                </option>
+                <option value="EMBALAJES">
+                  <?= t('t_for_embalajes'); ?>
+                </option>
+                <option value="ALMACEN GUARDAMUEBLES">
+                  <?= t('t_for_almacen'); ?>
+                </option>
+              </select>
+            </div>
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_fechas_deseadas'); ?>
+              </label>
+              <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza" type="date" placeholder="" class="caj1" required />
+            </div>
 
 
 
-              <div>
-                <label class="lb_1">
-                  <?= t('t_for_como_conocio'); ?>
-                </label>
-                <select id="Comonosconocio" name="Comonosconocio" class="caj01 caja01-ancho">
-                  <option value="">---</option>
-                  <option value="Páginas amarillas">
-                    <?= t('t_for_paginaamarillas'); ?>
-                  </option>
-                  <option value="Camiones">
-                    <?= t('t_for_camiones'); ?>
-                  </option>
-                  <option value="Google">
-                    <?= t('t_for_google'); ?>
-                  </option>
-                  <option value="Otros Internet">
-                    <?= t('t_for_internet'); ?>
-                  </option>
-                  <option value="Redes Sociales">
-                    <?= t('t_for_redessociales'); ?>
-                  </option>
-                  <option value="Habitissimo">
-                    <?= t('t_for_habitissimo'); ?>
-                  </option>
-                  <option value="Recomendación">
-                    <?= t('t_for_recomendacion'); ?>
-                  </option>
-                  <option value="Ya fui cliente">
-                    <?= t('t_for_yafuicliente'); ?>
-                  </option>
-                </select>
-              </div>
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_como_conocio'); ?>
+              </label>
+              <select id="Comonosconocio" name="Comonosconocio" class="caj01 caja01-ancho">
+                <option value="">---</option>
+                <option value="Páginas amarillas">
+                  <?= t('t_for_paginaamarillas'); ?>
+                </option>
+                <option value="Camiones">
+                  <?= t('t_for_camiones'); ?>
+                </option>
+                <option value="Google">
+                  <?= t('t_for_google'); ?>
+                </option>
+                <option value="Otros Internet">
+                  <?= t('t_for_internet'); ?>
+                </option>
+                <option value="Redes Sociales">
+                  <?= t('t_for_redessociales'); ?>
+                </option>
+                <option value="Habitissimo">
+                  <?= t('t_for_habitissimo'); ?>
+                </option>
+                <option value="Recomendación">
+                  <?= t('t_for_recomendacion'); ?>
+                </option>
+                <option value="Ya fui cliente">
+                  <?= t('t_for_yafuicliente'); ?>
+                </option>
+              </select>
+            </div>
 
-              <!-- <label class="lb_1"><u>
+            <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_destino'); ?>
                 </u></label>
               <label class="lb_1">
@@ -358,15 +282,14 @@ include('inc_header.php');
               <?= t('t_for_comentarios'); ?>
             </label>
             <textarea class="caj2" id="Mensaje" name="Mensaje" data-name="Mensaje" cols="" rows="" placeholder="<?= t('t_for_comentarios'); ?>" required="required"></textarea> -->
-            </div>
-            <div class="div-aceptar centrar">
-              <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
-              <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>
-            </div>
-            <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar'); ?>" />
-            <!-- <input class="bt_form" type="reset" value="<?= t('t_for_limpiar'); ?>" /> -->
-          </form>
-        <?php } ?>
+          </div>
+          <div class="div-aceptar centrar">
+            <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
+            <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>
+          </div>
+          <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar'); ?>" />
+          <!-- <input class="bt_form" type="reset" value="<?= t('t_for_limpiar'); ?>" /> -->
+        </form>
       </div>
       <div class="clear1"></div>
       <!-- <div class="text_descr_3">

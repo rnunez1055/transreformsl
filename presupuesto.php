@@ -174,213 +174,142 @@ include('inc_header.php');
                 </option>
               </select>
               <label class="lb_1">
-                <?= t('t_for_poblacion'); ?>
+                Nombres
               </label>
-              <input class="caj1" id="poblacion_origen" name="poblacion_origen" data-name="poblacion_origen" type="text" placeholder="<?= t('t_for_poblacion'); ?>"  required="required"/>
+              <input class="caj1" id="nombres_p" name="nombres_p" data-name="nombres_p" type="text" placeholder="Nombres" required="required" />
+            </div>
+            <div>
               <label class="lb_1">
-                <?= t('t_for_origen_direccion'); ?>
+                Apellidos
               </label>
-              <input class="caj1" id="direccion_origen" name="direccion_origen" data-name="direccion_origen" type="text" placeholder="<?= t('t_for_origen_direccion'); ?>"  required="required"/>
+              <input class="caj1" id="apellidos_p" name="apellidos_p" data-name="apellidos_p" type="text" placeholder="Apellidos" required="required" />
+            </div>
+            <div>
               <label class="lb_1">
-                <?= t('t_for_cod_postal'); ?>
+                <?= t('t_for_email'); ?>
               </label>
-              <input class="caj1" id="cod_postal_origen" name="cod_postal_origen" data-name="cod_postal_origen" type="text" placeholder="<?= t('t_for_cod_postal'); ?>"  required="required"/>
-              <label class="lb_1">
-                <?= t('t_for_piso'); ?>
-              </label>
-              <input class="caj1" id="piso_origen" name="piso_origen" data-name="piso_origen" type="text" placeholder="<?= t('t_for_piso'); ?>"  required="required"/>
-              <label class="lb_1">
-                <?= t('t_for_ascensor'); ?>
-              </label>
-              <select id="ascensor_origen" name="ascensor_origen" class="caj0">
-                <option value="spiso" selected="selected">--</option>
-                <option value="SI"><?= t('t_for_si'); ?></option>
-                <option value="NO"><?= t('t_for_no'); ?></option>
-              </select> -->
-                <label class="lb_1">
-                  <?= t('t_for_fechas_deseadas'); ?>
-                </label>
-                <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza" type="date" placeholder="" class="caj1" required />
-              </div>
-              <div class="col_2">
-                <label class="lb_1">
-                  <?= t('t_for_email'); ?>
-                </label>
-                <input class="caj1" id="Email" name="Email" data-name="Email" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
-                <label class="lb_1">
-                  <?= t('t_for_servicio'); ?>
-                </label>
-                <select id="tipo_servicio" name="tipo_servicio" class="caj1">
-                  <option value="MUDANZAS LOCALES Y NACIONALES" selected="selected">
-                    <?= t('t_for_mudanzalocalesnacionales'); ?>
-                  </option>
-                  <option value="MUDANZAS INTERNACIONALES">
-                    <?= t('t_for_mudanzasinternacionales'); ?>
-                  </option>
-                  <option value="TRASLADO DE OFICINAS">
-                    <?= t('t_for_trasladodeoficinas'); ?>
-                  </option>
-                  <option value="DESMONTAJE Y MONTAJE DE MUEBLES">
-                    <?= t('t_for_desmontajemontajemuebles'); ?>
-                  </option>
-                  <option value="ELEVADOR AUTOMATICO DE MUEBLES">
-                    <?= t('t_for_elevadorautomatico'); ?>
-                  </option>
-                  <option value="EMBALAJES">
-                    <?= t('t_for_embalajes'); ?>
-                  </option>
-                  <option value="ALMACEN GUARDAMUEBLES">
-                    <?= t('t_for_almacen'); ?>
-                  </option>
-                </select>
-                <label class="lb_1">
-                  Movil
-                </label>
-                <input class="caj1" id="movil" name="movil" data-name="movil" type="text" placeholder="Movil" name="movil" data-name="movil" required="required" />
-                <label class="lb_1">
-                  <?= t('t_for_como_conocio'); ?>
-                </label>
-                <select id="Comonosconocio" name="Comonosconocio" class="caj01 caja01-ancho">
-                  <option value="">---</option>
-                  <option value="Páginas amarillas">
-                    <?= t('t_for_paginaamarillas'); ?>
-                  </option>
-                  <option value="Camiones">
-                    <?= t('t_for_camiones'); ?>
-                  </option>
-                  <option value="Google">
-                    <?= t('t_for_google'); ?>
-                  </option>
-                  <option value="Otros Internet">
-                    <?= t('t_for_internet'); ?>
-                  </option>
-                  <option value="Redes Sociales">
-                    <?= t('t_for_redessociales'); ?>
-                  </option>
-                  <option value="Habitissimo">
-                    <?= t('t_for_habitissimo'); ?>
-                  </option>
-                  <option value="Recomendación">
-                    <?= t('t_for_recomendacion'); ?>
-                  </option>
-                  <option value="Ya fui cliente">
-                    <?= t('t_for_yafuicliente'); ?>
-                  </option>
-                </select>
+              <input class="caj1" id="email_p" name="email_p" data-name="email_p" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
+            </div>
 
-                <!-- <label class="lb_1"><u>
-                <?= t('t_title_for_ciudad_destino'); ?>
-                </u></label>
+            <div>
               <label class="lb_1">
-                <?= t('t_for_provincia'); ?>
+                <?= t('t_for_telefono'); ?>
               </label>
-              <select id="provincia_destino" name="provincia_destino" class="caj1">
-                <option value="">---</option>
-                <option value="ALICANTE">ALICANTE</option>
-                <option value="ASTURIAS">ASTURIAS</option>
-                <option value="BARCELONA">BARCELONA</option>
-                <option value="BILBAO">BILBAO</option>
-                <option value="CADIZ">CADIZ</option>
-                <option value="CASTELLON">CASTELLON</option>
-                <option value="CORDOBA">CORDOBA</option>
-                <option value="GALICIA - LA CORUÑA">GALICIA - LA CORUÑA</option>
-                <option value="GERONA">GERONA</option>
-                <option value="GRANADA">GRANADA</option>
-                <option value="HUELVA">HUELVA</option>
-                <option value="JAEN">JAEN</option>
-                <option value="LA RIOJA">LA RIOJA</option>
-                <option value="LAS PALMAS DE GRAN CANARIA">LAS PALMAS DE GRAN CANARIA</option>
-                <option value="MADRID - TERMINAL NACIONAL">MADRID - TERMINAL NACIONAL</option>
-                <option value="MADRID - TERMINAL INTERNACIONAL">MADRID - TERMINAL INTERNACIONAL</option>
-                <option value="MALAGA">MALAGA</option>
-                <option value="MURCIA">MURCIA</option>
-                <option value="NAVARRA">NAVARRA</option>
-                <option value="PALMA DE MALLORCA">PALMA DE MALLORCA</option>
-                <option value="SAN SEBASTIAN - GUIPUZCOA">SAN SEBASTIAN - GUIPUZCOA</option>
-                <option value="SANTANDER - CANTABRIA">SANTANDER - CANTABRIA</option>
-                <option value="SEVILLA">SEVILLA</option>
-                <option value="TARRAGONA">TARRAGONA</option>
-                <option value="TENERIFE">TENERIFE</option>
-                <option value="VALENCIA">VALENCIA</option>
-                <option value="VALLADOLID">VALLADOLID</option>
-                <option value="VITORIA - ALAVA">VITORIA - ALAVA</option>
-                <option value="ZARAGOZA">ZARAGOZA</option>
-                <option value="BRUSELAS - BÉLGICA">BRUSELAS - BÉLGICA</option>
-                <option value="COIMBRA - PORTUGAL">COIMBRA - PORTUGAL</option>
-                <option value="LISBOA - PORTUGAL">LISBOA - PORTUGAL</option>
-                <option value="LONDRES - REINO UNIDO">LONDRES - REINO UNIDO</option>
-                <option value="MOSCÚ - RUSIA">MOSCÚ - RUSIA</option>
-                <option value="PARÍS - FRANCIA">PARÍS - FRANCIA</option>
-                <option value="OTROS">
-                <?= t('t_for_otros'); ?>
+              <input class="caj1" id="telefono_p" name="telefono_p" data-name="telefono_p" type="text" placeholder="<?= t('t_for_telefono'); ?>" required="required" />
+            </div>
+            <div>
+              <label class="lb_1">
+                Movil
+              </label>
+              <input class="caj1" id="movil_p" name="movil_p" data-name="movil_p" type="text" placeholder="Movil" required="required" />
+            </div>
+
+
+            <div>
+              <label class="lb_1">
+                <?= t('t_for_servicio'); ?>
+              </label>
+              <select id="tipo_servicio_p" name="tipo_servicio_p" class="caj1">
+                <option value="MUDANZAS LOCALES Y NACIONALES" selected="selected">
+                  <?= t('t_for_mudanzalocalesnacionales'); ?>
+                </option>
+                <option value="MUDANZAS INTERNACIONALES">
+                  <?= t('t_for_mudanzasinternacionales'); ?>
+                </option>
+                <option value="TRASLADO DE OFICINAS">
+                  <?= t('t_for_trasladodeoficinas'); ?>
+                </option>
+                <option value="DESMONTAJE Y MONTAJE DE MUEBLES">
+                  <?= t('t_for_desmontajemontajemuebles'); ?>
+                </option>
+                <option value="ELEVADOR AUTOMATICO DE MUEBLES">
+                  <?= t('t_for_elevadorautomatico'); ?>
+                </option>
+                <option value="EMBALAJES">
+                  <?= t('t_for_embalajes'); ?>
+                </option>
+                <option value="ALMACEN GUARDAMUEBLES">
+                  <?= t('t_for_almacen'); ?>
                 </option>
               </select>
+            </div>
+            <div>
               <label class="lb_1">
-                <?= t('t_for_poblacion'); ?>
+                <?= t('t_for_fechas_deseadas'); ?>
               </label>
-              <input class="caj1" id="poblacion_destino" name="poblacion_destino" data-name="poblacion_destino" type="text" placeholder="<?= t('t_for_poblacion'); ?>" required="required"/>
+              <input id="fecha_deseada_mudanza_p" name="fecha_deseada_mudanza_p" data-name="fecha_deseada_mudanza_p" type="date" placeholder="" class="caj1" required />
+            </div>
+
+
+
+            <div>
               <label class="lb_1">
-                <?= t('t_for_destino_direccion'); ?>
+                <?= t('t_for_como_conocio'); ?>
               </label>
-              <input class="caj1" id="direccion_destino" name="direccion_destino" data-name="direccion_destino" type="text" placeholder="<?= t('t_for_destino_direccion'); ?>"  required="required"/>
-              <label class="lb_1">
-                <?= t('t_for_cod_postal'); ?>
-              </label>
-              <input class="caj1" id="cod_postal_destino" name="cod_postal_destino" data-name="cod_postal_destino"  type="text" placeholder="<?= t('t_for_cod_postal'); ?>" required="required"/>
-              <label class="lb_1">
-                <?= t('t_for_piso'); ?>
-              </label>
-              <input class="caj1" id="piso_destino" name="piso_destino" data-name="piso_destino"  type="text" placeholder="<?= t('t_for_piso'); ?>" required="required"/>
-              <label class="lb_1">
-                <?= t('t_for_ascensor'); ?>
-              </label>
-              <select id="ascensor_destino" name="ascensor_destino" class="caj0">
-                <option value="spiso" selected="selected">--</option>
-                <option value="SI"><?= t('t_for_si'); ?></option>
-                <option value="NO"><?= t('t_for_no'); ?></option>
+              <select id="Comonosconocio_p" name="Comonosconocio_p" class="caj01 caja01-ancho">
+                <option value="">---</option>
+                <option value="Páginas amarillas">
+                  <?= t('t_for_paginaamarillas'); ?>
+                </option>
+                <option value="Camiones">
+                  <?= t('t_for_camiones'); ?>
+                </option>
+                <option value="Google">
+                  <?= t('t_for_google'); ?>
+                </option>
+                <option value="Otros Internet">
+                  <?= t('t_for_internet'); ?>
+                </option>
+                <option value="Redes Sociales">
+                  <?= t('t_for_redessociales'); ?>
+                </option>
+                <option value="Habitissimo">
+                  <?= t('t_for_habitissimo'); ?>
+                </option>
+                <option value="Recomendación">
+                  <?= t('t_for_recomendacion'); ?>
+                </option>
+                <option value="Ya fui cliente">
+                  <?= t('t_for_yafuicliente'); ?>
+                </option>
               </select>
             </div>
-            <label class="lb_1">
-              <?= t('t_for_comentarios'); ?>
-            </label>
-            <textarea class="caj2" id="Mensaje" name="Mensaje" data-name="Mensaje" cols="" rows="" placeholder="<?= t('t_for_comentarios'); ?>" required="required"></textarea> -->
-            </fieldset>
-            <div class="div-aceptar centrar">
-              <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
-              <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>
-            </div>
-            <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar'); ?>" />
-            <!-- <input class="bt_form" type="reset" value="<?= t('t_for_limpiar'); ?>" /> -->
-          </form>
-        <?php } ?>
+          </div>
+          <div class="div-aceptar centrar">
+            <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
+            <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>
+          </div>
+          <input class="bt_form" id="send" name="send" type="submit" value="<?= t('t_for_enviar'); ?>" />
+          <div class="text_descr_3">
+            <h5 align="center"><strong><i><span style="color:#007F59">"
+                    <?= t('t_for_slogan'); ?>
+                    "</span></i></strong></h5>
+          </div>
+        </form>
       </div>
-      <div class="clear1"></div>
-      <!-- <div class="text_descr_3">
-        <?= t('t_for_terminos'); ?>
-      </div> -->
-      <div class="text_descr_3">
-        <h5 align="center"><strong><i><span style="color:#007F59">"
-                <?= t('t_for_slogan'); ?>
-                "</span></i></strong></h5>
-      </div>
+      <!-- <div class="clear1"></div>
+      <?= t('t_for_terminos'); ?> -->
     </div>
-    <div class="clear1"></div>
-    <?php
-    include('inc_footer.php');
-    ?>
-    <script>
-      $(document).ready(function() {
-        $('#send').attr("disabled", true);
-        // $('#btn-enviar').removeClass("primary-button");
 
-        $('#micheckbox').on('click', function() {
-          if ($(this).is(':checked')) {
-            // $('#btn-enviar').addClass("primary-button");
-            $('#send').attr("disabled", false);
-          } else {
-            $('#send').attr("disabled", true);
-            // $('#btn-enviar').removeClass("primary-button");
-          }
-        });
-      });
-    </script>
+  </div>
+  <div class="clear1"></div>
+  <?php
+  include('inc_footer.php');
+  ?>
+  <script src="ajax_form.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#send').attr("disabled", true);
+      $('#btn-enviar').removeClass("primary-button");
+
+      $('#micheckbox').on('click', function() {
+        if ($(this).is(':checked')) {
+          $('#btn-enviar').addClass("primary-button");
+          $('#send').attr("disabled", false);
+        } else {
+          $('#send').attr("disabled", true);
+          $('#btn-enviar').removeClass("primary-button");
+        }
+      })
+    })
+  </script>

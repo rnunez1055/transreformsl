@@ -107,22 +107,40 @@ include('inc_header.php');
         } else {
         ?>
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="contact" name="contact">
-            <fieldset>
-              <div class="col_1">
+            <div class="form__grid">
+              <div>
                 <label class="lb_1">
                   <?= t('t_for_nombres'); ?>
                 </label>
                 <input class="caj1" id="nombre" name="nombre" data-name="nombre" type="text" placeholder="<?= t('t_for_nombres'); ?>" required="required" />
+              </div>
+              <div>
                 <label class="lb_1">
                   <?= t('t_for_apellidos'); ?>
                 </label>
                 <input class="caj1" id="apellidos" name="apellidos" data-name="apellidos" type="text" placeholder="<?= t('t_for_apellidos'); ?>" required="required" />
+              </div>
+              <div>
+                <label class="lb_1">
+                  <?= t('t_for_email'); ?>
+                </label>
+                <input class="caj1" id="Email" name="Email" data-name="Email" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
+              </div>
+
+              <div>
                 <label class="lb_1">
                   <?= t('t_for_telefono'); ?>
                 </label>
                 <input class="caj1" id="telefono" name="telefono" data-name="telefono" type="text" placeholder="<?= t('t_for_telefono'); ?>" name="telefono" data-name="telefono" required="required" />
+              </div>
+              <div>
+                <label class="lb_1">
+                  Movil
+                </label>
+                <input class="caj1" id="movil" name="movil" data-name="movil" type="text" placeholder="Movil" name="movil" data-name="movil" required="required" />
+              </div>
 
-                <!-- <label class="lb_1"><u>
+              <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_origen'); ?>
                 </u></label>
               <label class="lb_1">
@@ -192,17 +210,9 @@ include('inc_header.php');
                 <option value="spiso" selected="selected">--</option>
                 <option value="SI"><?= t('t_for_si'); ?></option>
                 <option value="NO"><?= t('t_for_no'); ?></option>
+                
               </select> -->
-                <label class="lb_1">
-                  <?= t('t_for_fechas_deseadas'); ?>
-                </label>
-                <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza" type="date" placeholder="" class="caj1" required />
-              </div>
-              <div class="col_2">
-                <label class="lb_1">
-                  <?= t('t_for_email'); ?>
-                </label>
-                <input class="caj1" id="Email" name="Email" data-name="Email" type="email" placeholder="<?= t('t_for_email'); ?>" required="required" />
+              <div>
                 <label class="lb_1">
                   <?= t('t_for_servicio'); ?>
                 </label>
@@ -229,10 +239,17 @@ include('inc_header.php');
                     <?= t('t_for_almacen'); ?>
                   </option>
                 </select>
+              </div>
+              <div>
                 <label class="lb_1">
-                  Movil
+                  <?= t('t_for_fechas_deseadas'); ?>
                 </label>
-                <input class="caj1" id="movil" name="movil" data-name="movil" type="text" placeholder="Movil" name="movil" data-name="movil" required="required" />
+                <input id="fecha_deseada_mudanza" name="fecha_deseada_mudanza" data-name="fecha_deseada_mudanza" type="date" placeholder="" class="caj1" required />
+              </div>
+
+
+
+              <div>
                 <label class="lb_1">
                   <?= t('t_for_como_conocio'); ?>
                 </label>
@@ -263,8 +280,9 @@ include('inc_header.php');
                     <?= t('t_for_yafuicliente'); ?>
                   </option>
                 </select>
+              </div>
 
-                <!-- <label class="lb_1"><u>
+              <!-- <label class="lb_1"><u>
                 <?= t('t_title_for_ciudad_destino'); ?>
                 </u></label>
               <label class="lb_1">
@@ -340,7 +358,7 @@ include('inc_header.php');
               <?= t('t_for_comentarios'); ?>
             </label>
             <textarea class="caj2" id="Mensaje" name="Mensaje" data-name="Mensaje" cols="" rows="" placeholder="<?= t('t_for_comentarios'); ?>" required="required"></textarea> -->
-            </fieldset>
+            </div>
             <div class="div-aceptar centrar">
               <input type="checkbox" name="checkbox" id="micheckbox" class="checkbox">
               <p>Acepto y he leído la política de <a style="color:#007F59" href="politica-privacidad.php" target="_blank" class="aceptar-terminos">protección de datos</a></p>

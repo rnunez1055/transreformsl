@@ -1342,3 +1342,16 @@ textarea.w-select {
 .div-aceptar input{
 	margin-top: .6rem;
 }
+.form__grid{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: .6rem;
+}
+@media screen and (max-width:465px){
+	.form__grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.text_descr_3{
+		margin-top: 2rem;
+	}
+}

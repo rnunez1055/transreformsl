@@ -2,7 +2,7 @@
 $pPageIsPublic = true;
 include '_common.php';
 //header('Access-Control-Allow-Origin: *');
-    
+
 $emailFrom = "a.marinos@evolucionmedia.pe";
 $emailTo = "a.marinos@evolucionmedia.pe";
 // $emailFrom = "info@servimoving.com";
@@ -10,14 +10,14 @@ $emailTo = "a.marinos@evolucionmedia.pe";
 $subject = "FORMULARIO DE SOLICITAR PRESUPUESTO TRANSREFORM";
 
 // Datos personales del Cliente
-$nombres = strip_tags($_POST['Nombre']);
-$apellidos = strip_tags($_POST['Apellidos']);
-$email = strip_tags($_POST['Email']);
-$telefono = strip_tags($_POST['Telefono']);
-$movil = strip_tags($_POST['Movil']);
-$tipo_servicio = strip_tags($_POST['tipo_servicio']);
-$fecha_deseada_mudanza = strip_tags($_POST['fecha_deseada_mudanza']);
-$Comonosconocio = strip_tags($_POST['Comonosconocio']);
+$nombres_p = strip_tags($_POST['nombres_p']);
+$apellidos_p = strip_tags($_POST['apellidos_p']);
+$email_p = strip_tags($_POST['email_p']);
+$telefono_p = strip_tags($_POST['telefono_p']);
+$movil_p = strip_tags($_POST['movil_p']);
+$tipo_servicio_p = strip_tags($_POST['tipo_servicio_p']);
+$fecha_deseada_mudanza_p = strip_tags($_POST['fecha_deseada_mudanza_p']);
+$Comonosconocio_p = strip_tags($_POST['Comonosconocio_p']);
 
 //Cuidad de Origen
 /*$provincia_origen = strip_tags($_POST['provincia_origen']);
@@ -37,14 +37,14 @@ $ascensor_destino = strip_tags($_POST['ascensor_destino']);*/
 
 //$mensaje = strip_tags($_POST['Mensaje']);
 
-$body = "Nombres: ".$nombres."\n";								
-$body .= "Apellidos: ".$apellidos."\n";
-$body .= "E-mail: ".$email."\n";
-$body .= "Teléfono: ".$telefono."\n";
-$body .= "Movil: ".$movil."\n";
-$body .= "Tipo de Servicio: ".$tipo_servicio."\n";
-$body .= "Fecha deseada para el Servicio: ".$fecha_deseada_mudanza."\n\n";
-$body .= "¿Cómo nos conoció?: ".$Comonosconocio."\n";
+$body = "Nombres: " . $nombres_p . "\n";
+$body .= "Apellidos: " . $apellidos_p . "\n";
+$body .= "E-mail: " . $email_p . "\n";
+$body .= "Teléfono: " . $telefono_p . "\n";
+$body .= "Movil: " . $movil_p . "\n";
+$body .= "Tipo de Servicio: " . $tipo_servicio_p . "\n";
+$body .= "Fecha deseada para el Servicio: " . $fecha_deseada_mudanza_p . "\n\n";
+$body .= "¿Cómo nos conoció?: " . $Comonosconocio_p . "\n";
 
 /*$body .= "CUIDAD DE ORIGEN \n";
 $body .= "Provincia: ".$provincia_origen."\n";
@@ -64,21 +64,14 @@ $body .= "Ascensor: ".$ascensor_destino."\n\n";*/
 
 //$body .= "Mensaje: ".$mensaje."\n";
 
-$headers = "From: ".$emailFrom."\n";
-$headers .= "Reply-To:".$email."\n";	
+$headers = "From: " . $emailFrom . "\n";
+$headers .= "Reply-To:" . $email . "\n";
 
 $envio = mail($emailTo, $subject, $body, $headers);
 
-if($envio){
-    $miresultado = '
-    <h2 class="alert alert-success centrar">'.t('mensaje_title_bien').'</h2>
-    <h4 class="title-message">'.t('mensaje_texto_bien2').'</h4>
-    <a href="index" class="button__cancelar primary-button btn-preguntas btn-form">'.t('mensaje_btn_bien').'</a>';
-}else{
-    $miresultado = '
-    <h2  class="alert alert-danger centrar">'.t('mensaje_title_error').'</h2>
-    <h4 class="title-message">'.t('mensaje_texto_error2').'</h4>
-    <a href="index" class="button__cancelar primary-button btn-preguntas btn-form">'.t('mensaje_btn_bien').'</a>';
+if ($envio) {
+    $miresultado = '<p class="feedback yay"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_OK") . '</a></p>';
+} else {
+    $miresultado = '<p class="feedback oops"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_ERROR") . '</a></p>';
 }
 echo $miresultado;
-?>

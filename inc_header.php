@@ -8,15 +8,18 @@
     <title><?= $seo->metaTitle  ?></title>
     <meta name="description" content="<?php echo $seo->metaDescription; ?>" />
     <meta name="Keywords" content="<?php echo $seo->metaKeyword; ?>" />
-    <!----------------JQUERY VALIDATOR------------------->
-    <script type="text/javascript" src="contenido/js/jquery.min.js"></script>
-    <script type="text/javascript" src="contenido/js/jquery.validate.js"></script>
-    <script type="text/javascript" src="contenido/js/jquery.extend.js"></script>
-    <link rel="stylesheet" type="text/css" href="contenido/css/contactform.css">
 
     <!-- Jquery====================================================-->
     <script src="contenido/js/jquery.min.js"></script>
     <script src="contenido/js/myjquery.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+    <!----------------JQUERY VALIDATOR------------------->
+    <!-- <script type="text/javascript" src="contenido/js/jquery.min.js"></script>
+    <script type="text/javascript" src="contenido/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="contenido/js/jquery.extend.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="contenido/css/contactform.css">
+
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="contenido/fontawesome/css/all.css">
     <script src="contenido/fontawesome/js/all.js"></script>
@@ -127,20 +130,20 @@
                     <div class="c_idiomas">
 
                         <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=es") ?>" class="color_1_idio<?php if ($_SESSION['lng'] == 'es') {
-                                                                                                                                                            echo '_activo';
-                                                                                                                                                        } else {
-                                                                                                                                                            echo '';
-                                                                                                                                                        } ?>">ES |</a>
+                                                                                                                                                                echo '_activo';
+                                                                                                                                                            } else {
+                                                                                                                                                                echo '';
+                                                                                                                                                            } ?>">ES |</a>
                         <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=en") ?>" class="color_1_idio<?php if ($_SESSION['lng'] == 'en') {
-                                                                                                                                                            echo '_activo';
-                                                                                                                                                        } else {
-                                                                                                                                                            echo '';
-                                                                                                                                                        } ?>"> EN |</a>
+                                                                                                                                                                echo '_activo';
+                                                                                                                                                            } else {
+                                                                                                                                                                echo '';
+                                                                                                                                                            } ?>"> EN |</a>
                         <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=ca") ?>" class="color_1_idio<?php if ($_SESSION['lng'] == 'ca') {
-                                                                                                                                                            echo '_activo';
-                                                                                                                                                        } else {
-                                                                                                                                                            echo '';
-                                                                                                                                                        } ?>">CAT</a>
+                                                                                                                                                                echo '_activo';
+                                                                                                                                                            } else {
+                                                                                                                                                                echo '';
+                                                                                                                                                            } ?>">CAT</a>
                         <!--<a href="#" class="color_2_idio">ES |</a>
           <a href="#" class="color_1_idio"> EN |</a>
           <a href="#" class="color_1_idio">CAT</a>-->
@@ -249,24 +252,24 @@
 
                 <div class="contenedor__language">
                     <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=es") ?>" class="responsive_language language<?php if ($_SESSION['lng'] == 'es') {
-                                                                                                                                                                        echo '_activo';
-                                                                                                                                                                    } else {
-                                                                                                                                                                        echo '';
-                                                                                                                                                                    } ?>">
+                                                                                                                                                                            echo '_activo';
+                                                                                                                                                                        } else {
+                                                                                                                                                                            echo '';
+                                                                                                                                                                        } ?>">
                         <span>ES</span>
                     </a>
                     <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=en") ?>" class="responsive_language language<?php if ($_SESSION['lng'] == 'en') {
-                                                                                                                                                                        echo '_activo';
-                                                                                                                                                                    } else {
-                                                                                                                                                                        echo '';
-                                                                                                                                                                    } ?>">
+                                                                                                                                                                            echo '_activo';
+                                                                                                                                                                        } else {
+                                                                                                                                                                            echo '';
+                                                                                                                                                                        } ?>">
                         <span>EN</span>
                     </a>
                     <a href="<?= Tzn::concatUrl($_SERVER["PHP_SELF"] . ($p = &$_SERVER["QUERY_STRING"] ? "?$p" : ""), "lng=ca") ?>" class="responsive_language language<?php if ($_SESSION['lng'] == 'ca') {
-                                                                                                                                                                        echo '_activo';
-                                                                                                                                                                    } else {
-                                                                                                                                                                        echo '';
-                                                                                                                                                                    } ?>">
+                                                                                                                                                                            echo '_activo';
+                                                                                                                                                                        } else {
+                                                                                                                                                                            echo '';
+                                                                                                                                                                        } ?>">
                         <span>CAT</span>
                     </a>
 

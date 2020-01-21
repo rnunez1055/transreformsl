@@ -3,10 +3,10 @@ $pPageIsPublic = true;
 include '_common.php';
 //header('Access-Control-Allow-Origin: *');
 
-$emailFrom = "a.marinos@evolucionmedia.pe";
-$emailTo = "a.marinos@evolucionmedia.pe";
-// $emailFrom = "info@servimoving.com";
-// $emailTo = "info@servimoving.com";
+// $emailFrom = "a.marinos@evolucionmedia.pe";
+// $emailTo = "a.marinos@evolucionmedia.pe";
+$emailFrom = "informes@transreformsl.com";
+$emailTo = "informes@transreformsl.com";
 $subject = "FORMULARIO DE SOLICITAR PRESUPUESTO TRANSREFORM";
 
 // Datos personales del Cliente

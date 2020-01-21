@@ -5,8 +5,8 @@ include '_common.php';
 
 // $emailFrom = "a.marinos@evolucionmedia.pe";
 // $emailTo = "a.marinos@evolucionmedia.pe";
-$emailFrom = "informes@transreformsl.com";
-$emailTo = "informes@transreformsl.com";
+$emailFrom = "p.sanchezflores@transreformsl.com";
+$emailTo = "p.sanchezflores@transreformsl.com";
 $subject = "FORMULARIO DE SOLICITAR PRESUPUESTO TRANSREFORM";
 
 // Datos personales del Cliente

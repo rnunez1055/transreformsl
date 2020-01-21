@@ -29,10 +29,150 @@ include('inc_header.php');
         <?= t('title_presupuesto_mudanzas'); ?>
       </div>
       <div class="text_descr_3">
-        <form action="" method="post" id="form-presupuesto" name="form-presupuesto" class="form">
-          <div class="panel__confirmacion vertical" id="respta"></div>
-          <div class="form__grid">
-            <div>
+        <?php
+        if (isset($_POST['send'])) {
+          /*$emailFrom = "informes@transreformsl.com";
+          $emailTo = "informes@transreformsl.com";*/
+          $emailFrom = "rnunez@evolucionmedia.pe";
+          $emailTo = "rnunez@evolucionmedia.pe";
+          $subject = " | FORMULARIO DE PRESUPUESTO";
+
+          /*DATOS BASICOS*/
+          $nombre = strip_tags($_POST['nombre']);
+          $apellidos = strip_tags($_POST['apellidos']);
+          $telefono = strip_tags($_POST['telefono']);
+          $movil = strip_tags($_POST['movil']);
+          $Email = strip_tags($_POST['Email']);
+          $tipo_servicio = strip_tags($_POST['tipo_servicio']);
+          $fecha_deseada_mudanza = strip_tags($_POST['fecha_deseada_mudanza']);
+
+          /*DATOS ORIGEN*/
+          /*$provincia_origen = strip_tags($_POST['provincia_origen']);
+          $poblacion_origen = strip_tags($_POST['poblacion_origen']);
+          $direccion_origen = strip_tags($_POST['direccion_origen']);
+          $cod_postal_origen = strip_tags($_POST['cod_postal_origen']);
+          $piso_origen = strip_tags($_POST['piso_origen']);
+          $ascensor_origen = strip_tags($_POST['ascensor_origen']);*/
+
+          /*DATOS DESTINO*/
+          /*$provincia_destino = strip_tags($_POST['provincia_destino']);
+          $poblacion_destino = strip_tags($_POST['poblacion_destino']);
+          $direccion_destino = strip_tags($_POST['direccion_destino']);
+          $cod_postal_destino = strip_tags($_POST['cod_postal_destino']);
+          $piso_destino = strip_tags($_POST['piso_destino']);
+          $ascensor_destino = strip_tags($_POST['ascensor_destino']);*/
+
+          /*DATOS EXTRAS*/
+          $Comonosconocio = strip_tags($_POST['Comonosconocio']);
+          //$Mensaje = strip_tags($_POST['Mensaje']);
+
+          /*----------------------------------------------*/
+
+          $body = "Nombres : " . $nombre . "\n";
+          $body .= "Apellidos : " . $apellidos . "\n";
+          $body .= "Teléfono : " . $telefono . "\n";
+          $body .= "Movil : " . $movil . "\n";
+          $body .= "Email : " . $Email . "\n";
+          $body .= "Tipo de Servicio : " . $tipo_servicio . "\n";
+          $body .= "Fecha deseada de Mudanza : " . $fecha_deseada_mudanza . "\n";
+
+          /*DATOS ORIGEN*/
+          /*$body .= "DATOS DE ORIGEN \n";
+          $body .= "Provincia : " . $provincia_origen . "\n";
+          $body .= "Población : " . $poblacion_origen . "\n";
+          $body .= "Dirección : " . $direccion_origen . "\n";
+          $body .= "Cod-Postal : " . $cod_postal_origen . "\n";
+          $body .= "Piso : " . $piso_origen . "\n";
+          $body .= "Ascensor : " . $ascensor_origen . "\n";*/
+
+          /*DATOS DESTINO*/
+          /*$body .= "DATOS DE DESTINO \n";
+          $body .= "Provincia : " . $provincia_destino . "\n";
+          $body .= "Población : " . $poblacion_destino . "\n";
+          $body .= "Dirección : " . $direccion_destino . "\n";
+          $body .= "Cod-Postal : " . $cod_postal_destino . "\n";
+          $body .= "Piso : " . $piso_destino . "\n";
+          $body .= "Ascensor : " . $ascensor_destino . "\n";*/
+
+          /*DATOS EXTRAS*/
+          $body .= "Como nos conocio : " . $Comonosconocio . "\n";
+          //$body .= "Mensaje : " . $Mensaje . "\n";
+
+          $headers = "From: " . $emailFrom . "\n";
+          $headers .= "Reply-To:" . $email . "\n";
+
+          $success = mail($emailTo, $subject, $body, $headers);
+
+          if ($success) {
+            echo '<p class="feedback yay"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_OK") . '</a></p>';
+          } else {
+            echo '<p class="feedback oops"><a href="presupuesto.php" class="menu_arriba">' . t("t_for_ERROR") . '</a></p>';
+          }
+        } else {
+        ?>
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="contact" name="contact">
+            <fieldset>
+              <div class="col_1">
+                <label class="lb_1">
+                  <?= t('t_for_nombres'); ?>
+                </label>
+                <input class="caj1" id="nombre" name="nombre" data-name="nombre" type="text" placeholder="<?= t('t_for_nombres'); ?>" required="required" />
+                <label class="lb_1">
+                  <?= t('t_for_apellidos'); ?>
+                </label>
+                <input class="caj1" id="apellidos" name="apellidos" data-name="apellidos" type="text" placeholder="<?= t('t_for_apellidos'); ?>" required="required" />
+                <label class="lb_1">
+                  <?= t('t_for_telefono'); ?>
+                </label>
+                <input class="caj1" id="telefono" name="telefono" data-name="telefono" type="text" placeholder="<?= t('t_for_telefono'); ?>" name="telefono" data-name="telefono" required="required" />
+
+                <!-- <label class="lb_1"><u>
+                <?= t('t_title_for_ciudad_origen'); ?>
+                </u></label>
+              <label class="lb_1">
+                <?= t('t_for_provincia'); ?>
+              </label>
+              <select id="provincia_origen" name="provincia_origen"  class="caj1">
+                <option value="">---</option>
+                <option value="ALICANTE">ALICANTE</option>
+                <option value="ASTURIAS">ASTURIAS</option>
+                <option value="BARCELONA">BARCELONA</option>
+                <option value="BILBAO">BILBAO</option>
+                <option value="CADIZ">CADIZ</option>
+                <option value="CASTELLON">CASTELLON</option>
+                <option value="CORDOBA">CORDOBA</option>
+                <option value="GALICIA - LA CORUÑA">GALICIA - LA CORUÑA</option>
+                <option value="GERONA">GERONA</option>
+                <option value="GRANADA">GRANADA</option>
+                <option value="HUELVA">HUELVA</option>
+                <option value="JAEN">JAEN</option>
+                <option value="LA RIOJA">LA RIOJA</option>
+                <option value="LAS PALMAS DE GRAN CANARIA">LAS PALMAS DE GRAN CANARIA</option>
+                <option value="MADRID - TERMINAL NACIONAL">MADRID - TERMINAL NACIONAL</option>
+                <option value="MADRID - TERMINAL INTERNACIONAL">MADRID - TERMINAL INTERNACIONAL</option>
+                <option value="MALAGA">MALAGA</option>
+                <option value="MURCIA">MURCIA</option>
+                <option value="NAVARRA">NAVARRA</option>
+                <option value="PALMA DE MALLORCA">PALMA DE MALLORCA</option>
+                <option value="SAN SEBASTIAN - GUIPUZCOA">SAN SEBASTIAN - GUIPUZCOA</option>
+                <option value="SANTANDER - CANTABRIA">SANTANDER - CANTABRIA</option>
+                <option value="SEVILLA">SEVILLA</option>
+                <option value="TARRAGONA">TARRAGONA</option>
+                <option value="TENERIFE">TENERIFE</option>
+                <option value="VALENCIA">VALENCIA</option>
+                <option value="VALLADOLID">VALLADOLID</option>
+                <option value="VITORIA - ALAVA">VITORIA - ALAVA</option>
+                <option value="ZARAGOZA">ZARAGOZA</option>
+                <option value="BRUSELAS - BÉLGICA">BRUSELAS - BÉLGICA</option>
+                <option value="COIMBRA - PORTUGAL">COIMBRA - PORTUGAL</option>
+                <option value="LISBOA - PORTUGAL">LISBOA - PORTUGAL</option>
+                <option value="LONDRES - REINO UNIDO">LONDRES - REINO UNIDO</option>
+                <option value="MOSCÚ - RUSIA">MOSCÚ - RUSIA</option>
+                <option value="PARÍS - FRANCIA">PARÍS - FRANCIA</option>
+                <option value="OTROS">
+                <?= t('t_for_otros'); ?>
+                </option>
+              </select>
               <label class="lb_1">
                 Nombres
               </label>
